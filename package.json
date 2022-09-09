@@ -1,0 +1,13 @@
+{
+  "name": "remove-bg",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "py Tools.py"
+  },
+  
+
+  "author": "",
+  "license": "ISC"
+}
