@@ -14,7 +14,7 @@ response = requests.post(
 
 if response.status_code == requests.codes.ok:
     print("sukses!!")
-    with open('00' + str(acak) + '.png', 'wb') as out:
+    with open('rm' + str(acak) + '.png', 'wb') as out:
         out.write(response.content)
 else:
     print("Error banh, karena :", response.status_code, response.text)
