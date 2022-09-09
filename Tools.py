@@ -1,4 +1,9 @@
 import requests
+import string    
+import random 
+
+digit=12
+acak = ''.join(random.choices(string.ascii_lowercase + string.digits, k = digit))    
 
 response = requests.post(
     'https://api.remove.bg/v1.0/removebg',
@@ -9,7 +14,7 @@ response = requests.post(
 
 if response.status_code == requests.codes.ok:
     print("sukses!!")
-    with open('remove-bg.png', 'wb') as out:
+    with open(str(acak) + '.png', 'wb') as out:
         out.write(response.content)
 else:
     print("Error banh, karena :", response.status_code, response.text)
